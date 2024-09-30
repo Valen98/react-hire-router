@@ -1,8 +1,7 @@
 import PeopleListItem from './PeopleListItem'
+import PropTypes from 'prop-types';
 
-function PeopleList(props) {
-  const { people } = props
-
+function PeopleList({people}) {
   return (
     <ul>
       {people.map((person, index) => (
@@ -10,6 +9,10 @@ function PeopleList(props) {
       ))}
     </ul>
   )
+}
+
+PeopleList.propTypes = {
+  people: PropTypes.array
 }
 
 export default PeopleList
